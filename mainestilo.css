@@ -1,0 +1,410 @@
+/* ===========================
+   RESET BÁSICO
+=========================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #fff;
+}
+
+/* ===========================
+   BODY GENERAL
+=========================== */
+body {
+    background: linear-gradient(135deg, #1b2735, #090a0f);
+    min-height: 100vh;
+}
+
+/* ===========================
+   CENTRADO PARA PÁGINAS COMO INDEX
+=========================== */
+.center-screen {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* ===========================
+   WELCOME BOX (INDEX)
+=========================== */
+.welcome-box {
+    background: rgba(0, 0, 0, 0.7);
+    border: 2px solid #00ffff;
+    border-radius: 15px;
+    padding: 40px;
+    text-align: center;
+    width: 350px;
+    box-shadow: 0 0 20px #00ffff, 0 0 40px #ff00ff, 0 0 60px #00ff00;
+    animation: glow 2s infinite alternate;
+}
+
+@keyframes glow {
+    from {
+        box-shadow: 0 0 20px #00ffff, 0 0 40px #ff00ff, 0 0 60px #00ff00;
+    }
+    to {
+        box-shadow: 0 0 40px #00ffff, 0 0 80px #ff00ff, 0 0 120px #00ff00;
+    }
+}
+
+.welcome-box h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #00ffff;
+    text-shadow: 0 0 10px #00ffff, 0 0 20px #ff00ff;
+}
+
+.welcome-box p {
+    font-size: 1rem;
+    margin-bottom: 30px;
+    line-height: 1.5;
+}
+
+.btn-primary, .btn-secondary {
+    padding: 12px 25px;
+    margin: 10px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: bold;
+}
+
+.btn-primary {
+    background: linear-gradient(45deg, #00ffff, #ff00ff);
+    color: #fff;
+    box-shadow: 0 0 10px #00ffff, 0 0 20px #ff00ff;
+}
+
+.btn-primary:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 20px #00ffff, 0 0 40px #ff00ff;
+}
+
+.btn-secondary {
+    background: transparent;
+    border: 2px solid #ff00ff;
+    color: #ff00ff;
+}
+
+.btn-secondary:hover {
+    background: #ff00ff;
+    color: #fff;
+    transform: scale(1.1);
+}
+
+/* ===========================
+   DASHBOARD / SIDEBAR
+=========================== */
+.sidebar {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 220px;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.85);
+    border-right: 2px solid #00ffff;
+    padding: 20px;
+    overflow-y: auto;
+    box-shadow: 0 0 20px #00ffff;
+}
+
+.sidebar h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #ff00ff;
+    text-shadow: 0 0 10px #ff00ff;
+}
+
+.sidebar .search {
+    width: 100%;
+    padding: 8px;
+    border-radius: 8px;
+    border: none;
+    margin-bottom: 15px;
+    outline: none;
+    background: rgba(255,255,255,0.1);
+    color: #fff;
+}
+
+.sidebar ul {
+    list-style: none;
+}
+
+.sidebar ul li {
+    padding: 8px 5px;
+    cursor: pointer;
+    border-radius: 6px;
+    margin-bottom: 5px;
+    transition: all 0.3s ease;
+}
+
+.sidebar ul li:hover {
+    background: rgba(0,255,255,0.2);
+}
+
+.main-content {
+    margin-left: 240px;
+    padding: 30px;
+}
+
+/* ===========================
+   CHAT
+=========================== */
+.chat-wrapper {
+    margin-left: 240px;
+    padding: 20px;
+}
+
+.chat-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.chat-header h2 {
+    color: #00ffff;
+    text-shadow: 0 0 10px #00ffff;
+}
+
+.chat-messages {
+    height: 400px;
+    background: rgba(0,0,0,0.6);
+    border: 2px solid #ff00ff;
+    border-radius: 10px;
+    padding: 10px;
+    overflow-y: auto;
+    box-shadow: 0 0 15px #ff00ff;
+}
+
+.chat-input {
+    display: flex;
+    margin-top: 10px;
+}
+
+.chat-input input {
+    flex: 1;
+    padding: 10px;
+    border-radius: 8px 0 0 8px;
+    border: none;
+    outline: none;
+    background: rgba(255,255,255,0.1);
+    color: #fff;
+}
+
+.chat-input button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 0 8px 8px 0;
+    background: linear-gradient(45deg, #00ffff, #ff00ff);
+    color: #fff;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.chat-input button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px #00ffff, 0 0 40px #ff00ff;
+}
+
+/* ===========================
+   SOCIAL GRID
+=========================== */
+.social-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.social-card {
+    background: rgba(0,0,0,0.7);
+    border: 2px solid #ff00ff;
+    border-radius: 15px;
+    text-align: center;
+    padding: 20px;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    color: #fff;
+    box-shadow: 0 0 10px #ff00ff;
+}
+
+.social-card span {
+    display: block;
+    margin-top: 10px;
+    font-size: 0.8rem;
+    color: #00ffff;
+}
+
+.social-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px #00ffff, 0 0 40px #ff00ff;
+}
+
+/* ===========================
+   UPLOAD / FORM
+=========================== */
+.upload-container {
+    max-width: 600px;
+    margin: 50px auto;
+    background: rgba(0,0,0,0.8);
+    border: 2px solid #ff00ff;
+    border-radius: 15px;
+    padding: 30px;
+    color: #fff;
+    box-shadow: 0 0 20px #00ffff, 0 0 40px #ff00ff;
+    animation: glowUpload 2.5s infinite alternate;
+}
+
+@keyframes glowUpload {
+    from { box-shadow: 0 0 20px #00ffff, 0 0 40px #ff00ff; }
+    to { box-shadow: 0 0 40px #00ffff, 0 0 80px #ff00ff; }
+}
+
+.upload-container h2 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #ff00ff;
+    text-shadow: 0 0 10px #ff00ff, 0 0 20px #00ffff;
+}
+
+.upload-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.upload-form label {
+    margin: 15px 0 5px;
+    font-weight: bold;
+    color: #00ffff;
+}
+
+.upload-form input[type="file"],
+.upload-form textarea {
+    padding: 10px;
+    border-radius: 8px;
+    border: none;
+    outline: none;
+    font-size: 1rem;
+    margin-bottom: 15px;
+    background: rgba(255, 255, 255, 0.1);
+    color: #fff;
+    box-shadow: inset 0 0 5px #00ffff, inset 0 0 10px #ff00ff;
+}
+
+.upload-form textarea {
+    resize: vertical;
+    min-height: 80px;
+}
+
+.upload-form button {
+    padding: 12px;
+    font-size: 1rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 10px;
+    background: linear-gradient(45deg, #00ffff, #ff00ff);
+    color: #fff;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 10px #00ffff, 0 0 20px #ff00ff;
+}
+
+.upload-form button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px #00ffff, 0 0 40px #ff00ff;
+}
+
+/* ===========================
+   VIDEO GRID
+=========================== */
+.video-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.video-grid video {
+    width: 100%;
+    border-radius: 12px;
+    border: 2px solid #00ffff;
+    box-shadow: 0 0 10px #ff00ff;
+}
+
+/* ===========================
+   PROFILE
+=========================== */
+.profile-box {
+    max-width: 500px;
+    margin: 50px auto;
+    background: rgba(0,0,0,0.85);
+    border: 2px solid #00ffff;
+    border-radius: 15px;
+    padding: 30px;
+    text-align: center;
+    box-shadow: 0 0 20px #00ffff;
+}
+
+.profile-box img.profile-avatar {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: 2px solid #ff00ff;
+    margin-bottom: 15px;
+}
+
+.profile-box h2 {
+    margin-bottom: 20px;
+    color: #ff00ff;
+}
+
+.profile-box select,
+.profile-box textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    border: none;
+    outline: none;
+    background: rgba(255,255,255,0.1);
+    color: #fff;
+    box-shadow: inset 0 0 5px #00ffff, inset 0 0 10px #ff00ff;
+}
+
+.profile-box button {
+    padding: 12px;
+    font-size: 1rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 10px;
+    background: linear-gradient(45deg, #00ffff, #ff00ff);
+    color: #fff;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 10px #00ffff, 0 0 20px #ff00ff;
+}
+
+.profile-box button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px #00ffff, 0 0 40px #ff00ff;
+}
+
+/* ===========================
+   RESPONSIVE GENERAL
+=========================== */
+@media (max-width: 768px) {
+    .sidebar { width: 180px; }
+    .main-content, .chat-wrapper { margin-left: 200px; padding: 15px; }
+}
+
+@media (max-width: 500px) {
+    .sidebar { display: none; }
+    .main-content, .chat-wrapper { margin-left: 0; padding: 10px; }
+}
